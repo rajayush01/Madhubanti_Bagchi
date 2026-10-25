@@ -6,7 +6,7 @@ import MusicSection from '../sections/MusicSection'
 // import FeaturedVideoSection from '../sections/FeaturedVideoSection'
 // import JourneySection from '../sections/JourneySection'
 import PerformancesSection from '../sections/PerformancesSection'
-import GallerySection from '../sections/GallerySection'
+// import GallerySection from '../sections/GallerySection'
 import PressSection from '../sections/PressSection'
 import ContactSection from '../sections/ContactSection'
 import ImageMarquee from '../components/gallery/ImageMarquee'
@@ -27,10 +27,10 @@ export default function Home() {
       {/* <FeaturedVideoSection /> */}
       {/* <JourneySection /> */}
       <PerformancesSection />
-      <GallerySection />
+      {/* <GallerySection /> */}
       <PressSection />
-      <ContactSection />
       <ImageMarquee />
+      <ContactSection />
     </>
   )
 }

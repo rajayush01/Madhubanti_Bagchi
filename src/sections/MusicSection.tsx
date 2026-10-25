@@ -49,7 +49,7 @@ export default function MusicSection() {
     >
       <div className="mx-auto max-w-[1500px] text-center">
         <Eyebrow className="justify-center">Selected works</Eyebrow>
-        <Lines as="h2" lines={['The Music']} className="display mt-6 text-6xl md:text-8xl" />
+        <Lines as="h2" lines={['Latest Releases']} className="display mt-6 text-6xl md:text-8xl" />
 
         <div className=" overflow-hidden py-10">
           <div className="relative mx-auto h-[min(72vw,420px)]">

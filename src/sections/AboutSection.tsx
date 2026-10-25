@@ -24,7 +24,7 @@ export default function AboutSection() {
 
   return (
     <section id="about" className="relative overflow-hidden bg-ivory text-ink">
-      <div className="mx-auto grid max-w-[1500px] items-center gap-16 px-6 pb-28 md:px-12 md:pb-40 lg:grid-cols-12 lg:gap-8">
+      <div className="mx-auto grid max-w-[1500px] items-center gap-16 px-6 pb-28 md:px-12 md:pb-40 lg:grid-cols-12 lg:gap-8 mt-10">
         <div className="lg:col-span-5">
           <Eyebrow>The Artist</Eyebrow>
           <Lines as="h2" lines={['A journey', 'shaped by music.']} accentLast className="display mt-8 text-[clamp(3rem,7vw,6rem)]" />

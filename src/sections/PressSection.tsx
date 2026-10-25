@@ -4,35 +4,7 @@ import { awards, awardsFeature } from "../data/awards";
 import Eyebrow from "../components/ui/Eyebrow";
 import Lines from "../components/ui/Lines";
 import AwardEmblem from "../components/ui/AwardEmblem";
-// import Media from '../components/ui/Media'
-
-// const when = (d: string) =>
-//   d
-//     ? new Date(d).toLocaleDateString("en-IN", {
-//         month: "short",
-//         year: "numeric",
-//       })
-//     : "Date";
-
-// function Block({
-//   icon,
-//   title,
-//   children,
-// }: {
-//   icon: React.ReactNode;
-//   title: string;
-//   children: React.ReactNode;
-// }) {
-//   return (
-//     <div className="mt-24 grid gap-8 lg:grid-cols-12">
-//       <h3 className="label flex items-center gap-3 text-maroon lg:col-span-3">
-//         {icon}
-//         {title}
-//       </h3>
-//       <div className="lg:col-span-9">{children}</div>
-//     </div>
-//   );
-// }
+import AwardImage from "../assets/m15.jpg";
 
 export default function PressSection() {
   return (
@@ -58,30 +30,26 @@ export default function PressSection() {
         </div>
 
         <div className="mt-24 grid gap-12 lg:grid-cols-12 lg:gap-16">
-          <div className="lg:col-span-4">
-            <h3 className="label mb-6 flex items-center gap-3 text-maroon">
-              <AwardIcon size={16} aria-hidden />
-              Awards & nominations
-            </h3>
-            <div className="relative flex aspect-[4/5] items-center justify-center overflow-hidden rounded-md bg-sand/40 shadow-[0_24px_60px_-20px_rgba(16,16,18,0.35)]">
-              {awardsFeature.image ? (
-                <img
-                  src={awardsFeature.image}
-                  alt={awardsFeature.alt}
-                  loading="lazy"
-                  decoding="async"
-                  className="h-full w-full object-cover"
-                />
-              ) : (
-                <>
-                  <AwardEmblem className="w-3/4" />
-                  <span className="label absolute bottom-4 left-4 text-[0.6rem] text-charcoal/50">
-                    Placeholder — award image
-                  </span>
-                </>
-              )}
-            </div>
-          </div>
+     <div className="lg:col-span-4">
+  <h3 className="label mb-6 flex items-center gap-3 text-maroon">
+    <AwardIcon size={16} aria-hidden />
+    Awards & nominations
+  </h3>
+
+  <div className="group relative aspect-[4/5] overflow-hidden rounded-md bg-sand/40 shadow-[0_24px_60px_-20px_rgba(16,16,18,0.35)]">
+    <img
+      src={AwardImage}
+      alt="Award and recognition"
+      loading="eager"
+      decoding="async"
+      onError={(e) => {
+        console.error("Failed to load award image:", AwardImage);
+        e.currentTarget.style.display = "none";
+      }}
+      className="absolute inset-0 block h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+    />
+  </div>
+</div>
           <div className="lg:col-span-8 lg:pt-12">
             {awards.length === 0 ? (
               <p className="font-serif text-2xl italic text-charcoal/60">
@@ -122,8 +90,6 @@ export default function PressSection() {
             )}
           </div>
         </div>
-
-        
       </div>
     </section>
   );

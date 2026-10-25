@@ -85,7 +85,7 @@ import { ArrowDown } from "lucide-react";
 import { artist } from "../../data/artist";
 import { prefersReducedMotion } from "../../utils/scroll";
 import Media from "../ui/Media";
-import heroVideo from "../../assets/vid.mp4";
+import heroVideo from "../../../public/media/vid.mp4";
 
 gsap.registerPlugin(ScrollTrigger);
 

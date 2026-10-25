@@ -1,10 +1,10 @@
 import { Award as AwardIcon } from "lucide-react";
-import { awards, awardsFeature } from "../data/awards";
+import { awards} from "../data/awards";
 // import { press } from "../data/press";
 import Eyebrow from "../components/ui/Eyebrow";
 import Lines from "../components/ui/Lines";
 import AwardEmblem from "../components/ui/AwardEmblem";
-import AwardImage from "../assets/m15.jpg";
+import AwardImage from "../../public/media/m15.jpg";
 
 export default function PressSection() {
   return (
